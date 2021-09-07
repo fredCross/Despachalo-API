@@ -1,0 +1,40 @@
+{
+    "name": "apimatic/apiexternal",
+    "type": "library",
+    "keywords": [
+        "API-EXTERNAL",
+        "API",
+        "SDK"
+    ],
+    "homepage": "https://despachalo.cl/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Freddy Cruz",
+            "email": "freddy.cruz@despachalo.cl",
+            "homepage": "https://despachalo.cl/"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "apimatic/unirest-php": "^2.0",
+        "apimatic/jsonmapper": "^2.0.2"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIEXTERNALLib\\": "src/"
+        }
+    },
+    "scripts": {
+        "lint": "phpcs --standard=phpcs-ruleset.xml src/",
+        "lint-fix": "phpcbf --standard=phpcs-ruleset.xml src/",
+        "analyze": "phan --allow-polyfill-parser"
+    }
+}
